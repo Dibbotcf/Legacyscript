@@ -1,12 +1,12 @@
 import { useState, useEffect, Suspense, lazy } from "react";
 import { AuthProvider, useAuth } from "./components/AuthContext";
 import { Toaster } from "./components/ui/sonner";
-import { SharedInvoice } from "./components/SharedInvoice"; // Keep this one static or lazy? Let's lazy load it too but strictly it is conditional.
-import { getSharedInvoice } from "./utils/api.tsx";
+import { getSharedInvoice } from "./utils/api";
 import { ChatWidget } from "./components/ChatWidget";
 import { MetaManager } from "./components/MetaManager";
-import { AnimatedBackground } from "./components/AnimatedBackground"; // Keep background static for immediate visual feedback
+import { AnimatedBackground } from "./components/AnimatedBackground";
 import { Loading } from "./components/Loading";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 
 // Lazy load components to split chunks
 const Navigation = lazy(() => import("./components/Navigation").then(module => ({ default: module.Navigation })));
@@ -222,8 +222,10 @@ function AppContent() {
 
 export default function App() {
   return (
-    <AuthProvider>
-      <AppContent />
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }
