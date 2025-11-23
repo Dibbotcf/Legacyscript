@@ -53,9 +53,9 @@
           "vaul": "^1.1.2"
       },
 
-    "devDependencies": {
-  "vite": "^5.0.0"
-      },
+"dependencies": {
+  "sonner": "2.0.3"
+},
       "scripts": {
   "dev": "vite",
   "build": "vite build",
