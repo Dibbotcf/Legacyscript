@@ -1,6 +1,5 @@
 "use client";
-
-import { Toaster as Sonner, ToasterProps } from "sonner@2.0.3";
+import { Toaster } from "sonner"
 
 const Toaster = ({ ...props }: ToasterProps) => {
   return (
