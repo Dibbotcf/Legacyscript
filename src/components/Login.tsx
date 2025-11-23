@@ -4,7 +4,7 @@ import { Lock, User, LogIn, Eye, EyeOff } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { useAuth } from "./AuthContext";
-import logoImage from "figma:asset/6b6f7b17e13c104d2af9f5f9cfbe9b243a36b58f.png";
+import logoImage from "figma:asset/logo.png";
 
 interface LoginProps {
   onLogin?: () => void;
