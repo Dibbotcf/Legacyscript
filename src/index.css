@@ -1011,6 +1011,10 @@
     min-height: calc(var(--spacing) * 16);
   }
 
+  .min-h-\[50vh\] {
+    min-height: 50vh;
+  }
+
   .min-h-screen {
     min-height: 100vh;
   }
@@ -2928,6 +2932,10 @@
 
   .text-purple-400 {
     color: var(--color-purple-400);
+  }
+
+  .text-purple-500 {
+    color: var(--color-purple-500);
   }
 
   .text-red-400 {
